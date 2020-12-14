@@ -15,7 +15,7 @@ DEPS = $(OBJECTS:.o=.d)
 
 # target to build everything
 all: $(OBJECTS)
-	$(CXX) $(CXXFLAGS) -g $(OBJECTS) -o $(EXECUTABLE)
+	$(CXX) $(CXXFLAGS) $(OBJECTS) -o $(EXECUTABLE)
 
 .PRECIOUS: $(BINFOLDER)/. $(BINFOLDER)%/.
 
