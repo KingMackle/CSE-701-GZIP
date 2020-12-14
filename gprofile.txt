@@ -1,0 +1,383 @@
+Flat profile:
+
+Each sample counts as 0.01 seconds.
+  %   cumulative   self              self     total           
+ time   seconds   seconds    calls  ms/call  ms/call  name    
+ 38.63      0.39     0.39       20    19.51    19.51  GZipCRC32::update(std::vector<unsigned char, std::allocator<unsigned char> > const&)
+ 18.82      0.58     0.19                             GZipFile::inflate()
+ 17.83      0.76     0.18   651995     0.00     0.00  LZ77Buffer::put(std::vector<unsigned char, std::allocator<unsigned char> >&)
+ 12.88      0.89     0.13   651995     0.00     0.00  LZ77Buffer::get(unsigned short, unsigned short)
+ 10.89      1.00     0.11  1304179     0.00     0.00  GZipFileBlock::readSymbol(std::vector<unsigned short, std::allocator<unsigned short> >&, std::unordered_map<unsigned short, std::vector<unsigned short, std::allocator<unsigned short> >, std::hash<unsigned short>, std::equal_to<unsigned short>, std::allocator<std::pair<unsigned short const, std::vector<unsigned short, std::allocator<unsigned short> > > > >&)
+  0.99      1.01     0.01  1304308     0.00     0.00  BitInputStream::consumeNextBit()
+  0.00      1.01     0.00  1304752     0.00     0.00  std::_Hashtable<unsigned short, std::pair<unsigned short const, std::vector<unsigned short, std::allocator<unsigned short> > >, std::allocator<std::pair<unsigned short const, std::vector<unsigned short, std::allocator<unsigned short> > > >, std::__detail::_Select1st, std::equal_to<unsigned short>, std::hash<unsigned short>, std::__detail::_Mod_range_hashing, std::__detail::_Default_ranged_hash, std::__detail::_Prime_rehash_policy, std::__detail::_Hashtable_traits<false, false, true> >::find(unsigned short const&)
+  0.00      1.01     0.00  1304493     0.00     0.00  BitInputStream::consumeNextNBits(unsigned short)
+  0.00      1.01     0.00   163299     0.00     0.00  BitInputStream::consumeNextByte()
+  0.00      1.01     0.00      551     0.00     0.00  std::__detail::_Map_base<unsigned short, std::pair<unsigned short const, std::vector<unsigned short, std::allocator<unsigned short> > >, std::allocator<std::pair<unsigned short const, std::vector<unsigned short, std::allocator<unsigned short> > > >, std::__detail::_Select1st, std::equal_to<unsigned short>, std::hash<unsigned short>, std::__detail::_Mod_range_hashing, std::__detail::_Default_ranged_hash, std::__detail::_Prime_rehash_policy, std::__detail::_Hashtable_traits<false, false, true>, true>::operator[](unsigned short const&)
+  0.00      1.01     0.00      176     0.00     0.00  void std::vector<unsigned short, std::allocator<unsigned short> >::_M_realloc_insert<unsigned short const&>(__gnu_cxx::__normal_iterator<unsigned short*, std::vector<unsigned short, std::allocator<unsigned short> > >, unsigned short const&)
+  0.00      1.01     0.00      148     0.00     0.00  std::pair<std::_Rb_tree_iterator<unsigned short>, bool> std::_Rb_tree<unsigned short, unsigned short, std::_Identity<unsigned short>, std::less<unsigned short>, std::allocator<unsigned short> >::_M_insert_unique<unsigned short const&>(unsigned short const&)
+  0.00      1.01     0.00      120     0.00     0.00  std::_Hashtable<unsigned short, std::pair<unsigned short const, std::vector<unsigned short, std::allocator<unsigned short> > >, std::allocator<std::pair<unsigned short const, std::vector<unsigned short, std::allocator<unsigned short> > > >, std::__detail::_Select1st, std::equal_to<unsigned short>, std::hash<unsigned short>, std::__detail::_Mod_range_hashing, std::__detail::_Default_ranged_hash, std::__detail::_Prime_rehash_policy, std::__detail::_Hashtable_traits<false, false, true> >::clear()
+  0.00      1.01     0.00      120     0.00     0.00  std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >::basic_string<std::allocator<char> >(char const*, std::allocator<char> const&)
+  0.00      1.01     0.00       80     0.00     5.38  GZipFileBlock::decode()
+  0.00      1.01     0.00       72     0.00     0.00  std::_Hashtable<unsigned short, std::pair<unsigned short const, std::vector<unsigned short, std::allocator<unsigned short> > >, std::allocator<std::pair<unsigned short const, std::vector<unsigned short, std::allocator<unsigned short> > > >, std::__detail::_Select1st, std::equal_to<unsigned short>, std::hash<unsigned short>, std::__detail::_Mod_range_hashing, std::__detail::_Default_ranged_hash, std::__detail::_Prime_rehash_policy, std::__detail::_Hashtable_traits<false, false, true> >::_M_rehash(unsigned long, unsigned long const&)
+  0.00      1.01     0.00       62     0.00     0.00  HuffmanTable::getCodesLengths() const
+  0.00      1.01     0.00       62     0.00     0.00  HuffmanTable::getCodes() const
+  0.00      1.01     0.00       60     0.00     0.00  HuffmanTable::HuffmanTable(std::vector<unsigned short, std::allocator<unsigned short> >&, std::vector<unsigned short, std::allocator<unsigned short> >&)
+  0.00      1.01     0.00       60     0.00     0.00  GZipFileBlock::constructCodes(std::vector<unsigned short, std::allocator<unsigned short> >&)
+  0.00      1.01     0.00       20     0.00    41.01  GZipFileBlock::get_output()
+  0.00      1.01     0.00       20     0.00    16.13  GZipFileBlock::decode_dynamic_codes()
+  0.00      1.01     0.00       20     0.00     0.00  GZipFileBlock::is_final()
+  0.00      1.01     0.00       20     0.00     0.00  GZipFileBlock::GZipFileBlock(GZipFile&)
+  0.00      1.01     0.00        5     0.00     0.00  void std::vector<char, std::allocator<char> >::_M_realloc_insert<char const&>(__gnu_cxx::__normal_iterator<char*, std::vector<char, std::allocator<char> > >, char const&)
+  0.00      1.01     0.00        3     0.00     0.00  void std::vector<unsigned char, std::allocator<unsigned char> >::_M_realloc_insert<unsigned char>(__gnu_cxx::__normal_iterator<unsigned char*, std::vector<unsigned char, std::allocator<unsigned char> > >, unsigned char&&)
+  0.00      1.01     0.00        2     0.00     0.00  GZipFileHeaderFlags::GZipFileHeaderFlags()
+  0.00      1.01     0.00        1     0.00     0.00  _GLOBAL__sub_I__Z5usagev
+  0.00      1.01     0.00        1     0.00     0.00  _GLOBAL__sub_I__ZN10LZ77Buffer3putERSt6vectorIhSaIhEE
+  0.00      1.01     0.00        1     0.00     0.00  _GLOBAL__sub_I__ZN12HuffmanTableC2ERSt6vectorItSaItEES3_
+  0.00      1.01     0.00        1     0.00     0.00  _GLOBAL__sub_I__ZN14BitInputStreamC2ERKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEE
+  0.00      1.01     0.00        1     0.00     0.00  _GLOBAL__sub_I__ZN14GZipFileFooterC2Ev
+  0.00      1.01     0.00        1     0.00     0.00  _GLOBAL__sub_I__ZN14GZipFileHeaderC2Ev
+  0.00      1.01     0.00        1     0.00     0.00  _GLOBAL__sub_I__ZN22LZ77LengthDistancePair6LENGTHE
+  0.00      1.01     0.00        1     0.00     0.00  _GLOBAL__sub_I__ZN8GZipFileC2ERKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEES7_
+  0.00      1.01     0.00        1     0.00     0.00  BitInputStream::BitInputStream(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&)
+  0.00      1.01     0.00        1     0.00     0.00  GZipFileFooter::validateFooter(unsigned int, unsigned int)
+  0.00      1.01     0.00        1     0.00     0.00  GZipFileFooter::GZipFileFooter(BitInputStream&)
+  0.00      1.01     0.00        1     0.00     0.00  GZipFileFooter::GZipFileFooter()
+  0.00      1.01     0.00        1     0.00     0.00  GZipFileHeader::GZipFileHeader(BitInputStream&)
+  0.00      1.01     0.00        1     0.00     0.00  GZipFileHeader::GZipFileHeader()
+  0.00      1.01     0.00        1     0.00     0.00  GZipFileHeaderFlags::GZipFileHeaderFlags(unsigned char)
+  0.00      1.01     0.00        1     0.00     0.00  GZipFile::extract_filename[abi:cxx11]()
+  0.00      1.01     0.00        1     0.00     0.00  GZipCRC32::getValue()
+
+ %         the percentage of the total running time of the
+time       program used by this function.
+
+cumulative a running sum of the number of seconds accounted
+ seconds   for by this function and those listed above it.
+
+ self      the number of seconds accounted for by this
+seconds    function alone.  This is the major sort for this
+           listing.
+
+calls      the number of times this function was invoked, if
+           this function is profiled, else blank.
+
+ self      the average number of milliseconds spent in this
+ms/call    function per call, if this function is profiled,
+	   else blank.
+
+ total     the average number of milliseconds spent in this
+ms/call    function and its descendents per call, if this
+	   function is profiled, else blank.
+
+name       the name of the function.  This is the minor sort
+           for this listing. The index shows the location of
+	   the function in the gprof listing. If the index is
+	   in parenthesis it shows where it would appear in
+	   the gprof listing if it were to be printed.
+
+Copyright (C) 2012-2020 Free Software Foundation, Inc.
+
+Copying and distribution of this file, with or without modification,
+are permitted in any medium without royalty provided the copyright
+notice and this notice are preserved.
+
+		     Call graph (explanation follows)
+
+
+granularity: each sample hit covers 2 byte(s) for 0.99% of 1.01 seconds
+
+index % time    self  children    called     name
+                                                 <spontaneous>
+[1]    100.0    0.19    0.82                 GZipFile::inflate() [1]
+                0.00    0.82      20/20          GZipFileBlock::get_output() [2]
+                0.00    0.00      20/20          GZipFileBlock::GZipFileBlock(GZipFile&) [10]
+                0.00    0.00      60/120         std::_Hashtable<unsigned short, std::pair<unsigned short const, std::vector<unsigned short, std::allocator<unsigned short> > >, std::allocator<std::pair<unsigned short const, std::vector<unsigned short, std::allocator<unsigned short> > > >, std::__detail::_Select1st, std::equal_to<unsigned short>, std::hash<unsigned short>, std::__detail::_Mod_range_hashing, std::__detail::_Default_ranged_hash, std::__detail::_Prime_rehash_policy, std::__detail::_Hashtable_traits<false, false, true> >::clear() [24]
+                0.00    0.00      20/20          GZipFileBlock::is_final() [31]
+                0.00    0.00       1/1           GZipFileFooter::GZipFileFooter(BitInputStream&) [45]
+                0.00    0.00       1/1           GZipCRC32::getValue() [51]
+                0.00    0.00       1/1           GZipFileFooter::validateFooter(unsigned int, unsigned int) [44]
+-----------------------------------------------
+                0.00    0.82      20/20          GZipFile::inflate() [1]
+[2]     81.2    0.00    0.82      20         GZipFileBlock::get_output() [2]
+                0.39    0.00      20/20          GZipCRC32::update(std::vector<unsigned char, std::allocator<unsigned char> > const&) [4]
+                0.00    0.32      20/20          GZipFileBlock::decode_dynamic_codes() [5]
+                0.00    0.11      20/80          GZipFileBlock::decode() [3]
+-----------------------------------------------
+                0.00    0.11      20/80          GZipFileBlock::get_output() [2]
+                0.00    0.32      60/80          GZipFileBlock::decode_dynamic_codes() [5]
+[3]     42.6    0.00    0.43      80         GZipFileBlock::decode() [3]
+                0.18    0.00  651995/651995      LZ77Buffer::put(std::vector<unsigned char, std::allocator<unsigned char> >&) [6]
+                0.13    0.00  651995/651995      LZ77Buffer::get(unsigned short, unsigned short) [7]
+                0.11    0.01 1304013/1304179     GZipFileBlock::readSymbol(std::vector<unsigned short, std::allocator<unsigned short> >&, std::unordered_map<unsigned short, std::vector<unsigned short, std::allocator<unsigned short> >, std::hash<unsigned short>, std::equal_to<unsigned short>, std::allocator<std::pair<unsigned short const, std::vector<unsigned short, std::allocator<unsigned short> > > > >&) [8]
+                0.00    0.00 1303990/1304493     BitInputStream::consumeNextNBits(unsigned short) [19]
+                0.00    0.00     551/551         std::__detail::_Map_base<unsigned short, std::pair<unsigned short const, std::vector<unsigned short, std::allocator<unsigned short> > >, std::allocator<std::pair<unsigned short const, std::vector<unsigned short, std::allocator<unsigned short> > > >, std::__detail::_Select1st, std::equal_to<unsigned short>, std::hash<unsigned short>, std::__detail::_Mod_range_hashing, std::__detail::_Default_ranged_hash, std::__detail::_Prime_rehash_policy, std::__detail::_Hashtable_traits<false, false, true>, true>::operator[](unsigned short const&) [21]
+                0.00    0.00     464/1304752     std::_Hashtable<unsigned short, std::pair<unsigned short const, std::vector<unsigned short, std::allocator<unsigned short> > >, std::allocator<std::pair<unsigned short const, std::vector<unsigned short, std::allocator<unsigned short> > > >, std::__detail::_Select1st, std::equal_to<unsigned short>, std::hash<unsigned short>, std::__detail::_Mod_range_hashing, std::__detail::_Default_ranged_hash, std::__detail::_Prime_rehash_policy, std::__detail::_Hashtable_traits<false, false, true> >::find(unsigned short const&) [18]
+                0.00    0.00     176/176         void std::vector<unsigned short, std::allocator<unsigned short> >::_M_realloc_insert<unsigned short const&>(__gnu_cxx::__normal_iterator<unsigned short*, std::vector<unsigned short, std::allocator<unsigned short> > >, unsigned short const&) [22]
+                0.00    0.00      62/62          HuffmanTable::getCodes() const [28]
+                0.00    0.00      62/62          HuffmanTable::getCodesLengths() const [27]
+                0.00    0.00       3/3           void std::vector<unsigned char, std::allocator<unsigned char> >::_M_realloc_insert<unsigned char>(__gnu_cxx::__normal_iterator<unsigned char*, std::vector<unsigned char, std::allocator<unsigned char> > >, unsigned char&&) [33]
+-----------------------------------------------
+                0.39    0.00      20/20          GZipFileBlock::get_output() [2]
+[4]     38.6    0.39    0.00      20         GZipCRC32::update(std::vector<unsigned char, std::allocator<unsigned char> > const&) [4]
+-----------------------------------------------
+                0.00    0.32      20/20          GZipFileBlock::get_output() [2]
+[5]     31.9    0.00    0.32      20         GZipFileBlock::decode_dynamic_codes() [5]
+                0.00    0.32      60/80          GZipFileBlock::decode() [3]
+                0.00    0.00     166/1304179     GZipFileBlock::readSymbol(std::vector<unsigned short, std::allocator<unsigned short> >&, std::unordered_map<unsigned short, std::vector<unsigned short, std::allocator<unsigned short> >, std::hash<unsigned short>, std::equal_to<unsigned short>, std::allocator<std::pair<unsigned short const, std::vector<unsigned short, std::allocator<unsigned short> > > > >&) [8]
+                0.00    0.00     483/1304493     BitInputStream::consumeNextNBits(unsigned short) [19]
+                0.00    0.00      60/60          GZipFileBlock::constructCodes(std::vector<unsigned short, std::allocator<unsigned short> >&) [30]
+                0.00    0.00      60/60          HuffmanTable::HuffmanTable(std::vector<unsigned short, std::allocator<unsigned short> >&, std::vector<unsigned short, std::allocator<unsigned short> >&) [29]
+                0.00    0.00      60/120         std::_Hashtable<unsigned short, std::pair<unsigned short const, std::vector<unsigned short, std::allocator<unsigned short> > >, std::allocator<std::pair<unsigned short const, std::vector<unsigned short, std::allocator<unsigned short> > > >, std::__detail::_Select1st, std::equal_to<unsigned short>, std::hash<unsigned short>, std::__detail::_Mod_range_hashing, std::__detail::_Default_ranged_hash, std::__detail::_Prime_rehash_policy, std::__detail::_Hashtable_traits<false, false, true> >::clear() [24]
+                0.00    0.00      60/120         std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >::basic_string<std::allocator<char> >(char const*, std::allocator<char> const&) [25]
+-----------------------------------------------
+                0.18    0.00  651995/651995      GZipFileBlock::decode() [3]
+[6]     17.8    0.18    0.00  651995         LZ77Buffer::put(std::vector<unsigned char, std::allocator<unsigned char> >&) [6]
+-----------------------------------------------
+                0.13    0.00  651995/651995      GZipFileBlock::decode() [3]
+[7]     12.9    0.13    0.00  651995         LZ77Buffer::get(unsigned short, unsigned short) [7]
+-----------------------------------------------
+                0.00    0.00     166/1304179     GZipFileBlock::decode_dynamic_codes() [5]
+                0.11    0.01 1304013/1304179     GZipFileBlock::decode() [3]
+[8]     11.9    0.11    0.01 1304179         GZipFileBlock::readSymbol(std::vector<unsigned short, std::allocator<unsigned short> >&, std::unordered_map<unsigned short, std::vector<unsigned short, std::allocator<unsigned short> >, std::hash<unsigned short>, std::equal_to<unsigned short>, std::allocator<std::pair<unsigned short const, std::vector<unsigned short, std::allocator<unsigned short> > > > >&) [8]
+                0.01    0.00 1304288/1304308     BitInputStream::consumeNextBit() [9]
+                0.00    0.00 1304288/1304752     std::_Hashtable<unsigned short, std::pair<unsigned short const, std::vector<unsigned short, std::allocator<unsigned short> > >, std::allocator<std::pair<unsigned short const, std::vector<unsigned short, std::allocator<unsigned short> > > >, std::__detail::_Select1st, std::equal_to<unsigned short>, std::hash<unsigned short>, std::__detail::_Mod_range_hashing, std::__detail::_Default_ranged_hash, std::__detail::_Prime_rehash_policy, std::__detail::_Hashtable_traits<false, false, true> >::find(unsigned short const&) [18]
+-----------------------------------------------
+                0.00    0.00      20/1304308     GZipFileBlock::GZipFileBlock(GZipFile&) [10]
+                0.01    0.00 1304288/1304308     GZipFileBlock::readSymbol(std::vector<unsigned short, std::allocator<unsigned short> >&, std::unordered_map<unsigned short, std::vector<unsigned short, std::allocator<unsigned short> >, std::hash<unsigned short>, std::equal_to<unsigned short>, std::allocator<std::pair<unsigned short const, std::vector<unsigned short, std::allocator<unsigned short> > > > >&) [8]
+[9]      1.0    0.01    0.00 1304308         BitInputStream::consumeNextBit() [9]
+                0.00    0.00  163040/163299      BitInputStream::consumeNextByte() [20]
+-----------------------------------------------
+                0.00    0.00      20/20          GZipFile::inflate() [1]
+[10]     0.0    0.00    0.00      20         GZipFileBlock::GZipFileBlock(GZipFile&) [10]
+                0.00    0.00      20/1304308     BitInputStream::consumeNextBit() [9]
+                0.00    0.00      20/1304493     BitInputStream::consumeNextNBits(unsigned short) [19]
+-----------------------------------------------
+                0.00    0.00     464/1304752     GZipFileBlock::decode() [3]
+                0.00    0.00 1304288/1304752     GZipFileBlock::readSymbol(std::vector<unsigned short, std::allocator<unsigned short> >&, std::unordered_map<unsigned short, std::vector<unsigned short, std::allocator<unsigned short> >, std::hash<unsigned short>, std::equal_to<unsigned short>, std::allocator<std::pair<unsigned short const, std::vector<unsigned short, std::allocator<unsigned short> > > > >&) [8]
+[18]     0.0    0.00    0.00 1304752         std::_Hashtable<unsigned short, std::pair<unsigned short const, std::vector<unsigned short, std::allocator<unsigned short> > >, std::allocator<std::pair<unsigned short const, std::vector<unsigned short, std::allocator<unsigned short> > > >, std::__detail::_Select1st, std::equal_to<unsigned short>, std::hash<unsigned short>, std::__detail::_Mod_range_hashing, std::__detail::_Default_ranged_hash, std::__detail::_Prime_rehash_policy, std::__detail::_Hashtable_traits<false, false, true> >::find(unsigned short const&) [18]
+-----------------------------------------------
+                0.00    0.00      20/1304493     GZipFileBlock::GZipFileBlock(GZipFile&) [10]
+                0.00    0.00     483/1304493     GZipFileBlock::decode_dynamic_codes() [5]
+                0.00    0.00 1303990/1304493     GZipFileBlock::decode() [3]
+[19]     0.0    0.00    0.00 1304493         BitInputStream::consumeNextNBits(unsigned short) [19]
+                0.00    0.00     229/163299      BitInputStream::consumeNextByte() [20]
+-----------------------------------------------
+                0.00    0.00       8/163299      GZipFileFooter::GZipFileFooter(BitInputStream&) [45]
+                0.00    0.00      10/163299      GZipFileHeader::GZipFileHeader(BitInputStream&) [47]
+                0.00    0.00      12/163299      GZipFile::extract_filename[abi:cxx11]() [50]
+                0.00    0.00     229/163299      BitInputStream::consumeNextNBits(unsigned short) [19]
+                0.00    0.00  163040/163299      BitInputStream::consumeNextBit() [9]
+[20]     0.0    0.00    0.00  163299         BitInputStream::consumeNextByte() [20]
+-----------------------------------------------
+                0.00    0.00     551/551         GZipFileBlock::decode() [3]
+[21]     0.0    0.00    0.00     551         std::__detail::_Map_base<unsigned short, std::pair<unsigned short const, std::vector<unsigned short, std::allocator<unsigned short> > >, std::allocator<std::pair<unsigned short const, std::vector<unsigned short, std::allocator<unsigned short> > > >, std::__detail::_Select1st, std::equal_to<unsigned short>, std::hash<unsigned short>, std::__detail::_Mod_range_hashing, std::__detail::_Default_ranged_hash, std::__detail::_Prime_rehash_policy, std::__detail::_Hashtable_traits<false, false, true>, true>::operator[](unsigned short const&) [21]
+                0.00    0.00      72/72          std::_Hashtable<unsigned short, std::pair<unsigned short const, std::vector<unsigned short, std::allocator<unsigned short> > >, std::allocator<std::pair<unsigned short const, std::vector<unsigned short, std::allocator<unsigned short> > > >, std::__detail::_Select1st, std::equal_to<unsigned short>, std::hash<unsigned short>, std::__detail::_Mod_range_hashing, std::__detail::_Default_ranged_hash, std::__detail::_Prime_rehash_policy, std::__detail::_Hashtable_traits<false, false, true> >::_M_rehash(unsigned long, unsigned long const&) [26]
+-----------------------------------------------
+                0.00    0.00     176/176         GZipFileBlock::decode() [3]
+[22]     0.0    0.00    0.00     176         void std::vector<unsigned short, std::allocator<unsigned short> >::_M_realloc_insert<unsigned short const&>(__gnu_cxx::__normal_iterator<unsigned short*, std::vector<unsigned short, std::allocator<unsigned short> > >, unsigned short const&) [22]
+-----------------------------------------------
+                0.00    0.00     148/148         GZipFileBlock::constructCodes(std::vector<unsigned short, std::allocator<unsigned short> >&) [30]
+[23]     0.0    0.00    0.00     148         std::pair<std::_Rb_tree_iterator<unsigned short>, bool> std::_Rb_tree<unsigned short, unsigned short, std::_Identity<unsigned short>, std::less<unsigned short>, std::allocator<unsigned short> >::_M_insert_unique<unsigned short const&>(unsigned short const&) [23]
+-----------------------------------------------
+                0.00    0.00      60/120         GZipFile::inflate() [1]
+                0.00    0.00      60/120         GZipFileBlock::decode_dynamic_codes() [5]
+[24]     0.0    0.00    0.00     120         std::_Hashtable<unsigned short, std::pair<unsigned short const, std::vector<unsigned short, std::allocator<unsigned short> > >, std::allocator<std::pair<unsigned short const, std::vector<unsigned short, std::allocator<unsigned short> > > >, std::__detail::_Select1st, std::equal_to<unsigned short>, std::hash<unsigned short>, std::__detail::_Mod_range_hashing, std::__detail::_Default_ranged_hash, std::__detail::_Prime_rehash_policy, std::__detail::_Hashtable_traits<false, false, true> >::clear() [24]
+-----------------------------------------------
+                0.00    0.00      60/120         GZipFileBlock::constructCodes(std::vector<unsigned short, std::allocator<unsigned short> >&) [30]
+                0.00    0.00      60/120         GZipFileBlock::decode_dynamic_codes() [5]
+[25]     0.0    0.00    0.00     120         std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >::basic_string<std::allocator<char> >(char const*, std::allocator<char> const&) [25]
+-----------------------------------------------
+                0.00    0.00      72/72          std::__detail::_Map_base<unsigned short, std::pair<unsigned short const, std::vector<unsigned short, std::allocator<unsigned short> > >, std::allocator<std::pair<unsigned short const, std::vector<unsigned short, std::allocator<unsigned short> > > >, std::__detail::_Select1st, std::equal_to<unsigned short>, std::hash<unsigned short>, std::__detail::_Mod_range_hashing, std::__detail::_Default_ranged_hash, std::__detail::_Prime_rehash_policy, std::__detail::_Hashtable_traits<false, false, true>, true>::operator[](unsigned short const&) [21]
+[26]     0.0    0.00    0.00      72         std::_Hashtable<unsigned short, std::pair<unsigned short const, std::vector<unsigned short, std::allocator<unsigned short> > >, std::allocator<std::pair<unsigned short const, std::vector<unsigned short, std::allocator<unsigned short> > > >, std::__detail::_Select1st, std::equal_to<unsigned short>, std::hash<unsigned short>, std::__detail::_Mod_range_hashing, std::__detail::_Default_ranged_hash, std::__detail::_Prime_rehash_policy, std::__detail::_Hashtable_traits<false, false, true> >::_M_rehash(unsigned long, unsigned long const&) [26]
+-----------------------------------------------
+                0.00    0.00      62/62          GZipFileBlock::decode() [3]
+[27]     0.0    0.00    0.00      62         HuffmanTable::getCodesLengths() const [27]
+-----------------------------------------------
+                0.00    0.00      62/62          GZipFileBlock::decode() [3]
+[28]     0.0    0.00    0.00      62         HuffmanTable::getCodes() const [28]
+-----------------------------------------------
+                0.00    0.00      60/60          GZipFileBlock::decode_dynamic_codes() [5]
+[29]     0.0    0.00    0.00      60         HuffmanTable::HuffmanTable(std::vector<unsigned short, std::allocator<unsigned short> >&, std::vector<unsigned short, std::allocator<unsigned short> >&) [29]
+-----------------------------------------------
+                0.00    0.00      60/60          GZipFileBlock::decode_dynamic_codes() [5]
+[30]     0.0    0.00    0.00      60         GZipFileBlock::constructCodes(std::vector<unsigned short, std::allocator<unsigned short> >&) [30]
+                0.00    0.00     148/148         std::pair<std::_Rb_tree_iterator<unsigned short>, bool> std::_Rb_tree<unsigned short, unsigned short, std::_Identity<unsigned short>, std::less<unsigned short>, std::allocator<unsigned short> >::_M_insert_unique<unsigned short const&>(unsigned short const&) [23]
+                0.00    0.00      60/120         std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >::basic_string<std::allocator<char> >(char const*, std::allocator<char> const&) [25]
+-----------------------------------------------
+                0.00    0.00      20/20          GZipFile::inflate() [1]
+[31]     0.0    0.00    0.00      20         GZipFileBlock::is_final() [31]
+-----------------------------------------------
+                0.00    0.00       5/5           GZipFile::extract_filename[abi:cxx11]() [50]
+[32]     0.0    0.00    0.00       5         void std::vector<char, std::allocator<char> >::_M_realloc_insert<char const&>(__gnu_cxx::__normal_iterator<char*, std::vector<char, std::allocator<char> > >, char const&) [32]
+-----------------------------------------------
+                0.00    0.00       3/3           GZipFileBlock::decode() [3]
+[33]     0.0    0.00    0.00       3         void std::vector<unsigned char, std::allocator<unsigned char> >::_M_realloc_insert<unsigned char>(__gnu_cxx::__normal_iterator<unsigned char*, std::vector<unsigned char, std::allocator<unsigned char> > >, unsigned char&&) [33]
+-----------------------------------------------
+                0.00    0.00       1/2           GZipFileHeader::GZipFileHeader() [48]
+                0.00    0.00       1/2           GZipFileHeader::GZipFileHeader(BitInputStream&) [47]
+[34]     0.0    0.00    0.00       2         GZipFileHeaderFlags::GZipFileHeaderFlags() [34]
+-----------------------------------------------
+                0.00    0.00       1/1           __libc_csu_init [126]
+[35]     0.0    0.00    0.00       1         _GLOBAL__sub_I__Z5usagev [35]
+-----------------------------------------------
+                0.00    0.00       1/1           __libc_csu_init [126]
+[36]     0.0    0.00    0.00       1         _GLOBAL__sub_I__ZN10LZ77Buffer3putERSt6vectorIhSaIhEE [36]
+-----------------------------------------------
+                0.00    0.00       1/1           __libc_csu_init [126]
+[37]     0.0    0.00    0.00       1         _GLOBAL__sub_I__ZN12HuffmanTableC2ERSt6vectorItSaItEES3_ [37]
+-----------------------------------------------
+                0.00    0.00       1/1           __libc_csu_init [126]
+[38]     0.0    0.00    0.00       1         _GLOBAL__sub_I__ZN14BitInputStreamC2ERKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEE [38]
+-----------------------------------------------
+                0.00    0.00       1/1           __libc_csu_init [126]
+[39]     0.0    0.00    0.00       1         _GLOBAL__sub_I__ZN14GZipFileFooterC2Ev [39]
+-----------------------------------------------
+                0.00    0.00       1/1           __libc_csu_init [126]
+[40]     0.0    0.00    0.00       1         _GLOBAL__sub_I__ZN14GZipFileHeaderC2Ev [40]
+-----------------------------------------------
+                0.00    0.00       1/1           __libc_csu_init [126]
+[41]     0.0    0.00    0.00       1         _GLOBAL__sub_I__ZN22LZ77LengthDistancePair6LENGTHE [41]
+-----------------------------------------------
+                0.00    0.00       1/1           __libc_csu_init [126]
+[42]     0.0    0.00    0.00       1         _GLOBAL__sub_I__ZN8GZipFileC2ERKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEES7_ [42]
+-----------------------------------------------
+                0.00    0.00       1/1           GZipFile::GZipFile(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&) [104]
+[43]     0.0    0.00    0.00       1         BitInputStream::BitInputStream(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&) [43]
+-----------------------------------------------
+                0.00    0.00       1/1           GZipFile::inflate() [1]
+[44]     0.0    0.00    0.00       1         GZipFileFooter::validateFooter(unsigned int, unsigned int) [44]
+-----------------------------------------------
+                0.00    0.00       1/1           GZipFile::inflate() [1]
+[45]     0.0    0.00    0.00       1         GZipFileFooter::GZipFileFooter(BitInputStream&) [45]
+                0.00    0.00       8/163299      BitInputStream::consumeNextByte() [20]
+-----------------------------------------------
+                0.00    0.00       1/1           GZipFile::GZipFile(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&) [104]
+[46]     0.0    0.00    0.00       1         GZipFileFooter::GZipFileFooter() [46]
+-----------------------------------------------
+                0.00    0.00       1/1           GZipFile::GZipFile(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&) [104]
+[47]     0.0    0.00    0.00       1         GZipFileHeader::GZipFileHeader(BitInputStream&) [47]
+                0.00    0.00      10/163299      BitInputStream::consumeNextByte() [20]
+                0.00    0.00       1/2           GZipFileHeaderFlags::GZipFileHeaderFlags() [34]
+                0.00    0.00       1/1           GZipFileHeaderFlags::GZipFileHeaderFlags(unsigned char) [49]
+-----------------------------------------------
+                0.00    0.00       1/1           GZipFile::GZipFile(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&) [104]
+[48]     0.0    0.00    0.00       1         GZipFileHeader::GZipFileHeader() [48]
+                0.00    0.00       1/2           GZipFileHeaderFlags::GZipFileHeaderFlags() [34]
+-----------------------------------------------
+                0.00    0.00       1/1           GZipFileHeader::GZipFileHeader(BitInputStream&) [47]
+[49]     0.0    0.00    0.00       1         GZipFileHeaderFlags::GZipFileHeaderFlags(unsigned char) [49]
+-----------------------------------------------
+                0.00    0.00       1/1           GZipFile::GZipFile(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&) [104]
+[50]     0.0    0.00    0.00       1         GZipFile::extract_filename[abi:cxx11]() [50]
+                0.00    0.00      12/163299      BitInputStream::consumeNextByte() [20]
+                0.00    0.00       5/5           void std::vector<char, std::allocator<char> >::_M_realloc_insert<char const&>(__gnu_cxx::__normal_iterator<char*, std::vector<char, std::allocator<char> > >, char const&) [32]
+-----------------------------------------------
+                0.00    0.00       1/1           GZipFile::inflate() [1]
+[51]     0.0    0.00    0.00       1         GZipCRC32::getValue() [51]
+-----------------------------------------------
+
+ This table describes the call tree of the program, and was sorted by
+ the total amount of time spent in each function and its children.
+
+ Each entry in this table consists of several lines.  The line with the
+ index number at the left hand margin lists the current function.
+ The lines above it list the functions that called this function,
+ and the lines below it list the functions this one called.
+ This line lists:
+     index	A unique number given to each element of the table.
+		Index numbers are sorted numerically.
+		The index number is printed next to every function name so
+		it is easier to look up where the function is in the table.
+
+     % time	This is the percentage of the `total' time that was spent
+		in this function and its children.  Note that due to
+		different viewpoints, functions excluded by options, etc,
+		these numbers will NOT add up to 100%.
+
+     self	This is the total amount of time spent in this function.
+
+     children	This is the total amount of time propagated into this
+		function by its children.
+
+     called	This is the number of times the function was called.
+		If the function called itself recursively, the number
+		only includes non-recursive calls, and is followed by
+		a `+' and the number of recursive calls.
+
+     name	The name of the current function.  The index number is
+		printed after it.  If the function is a member of a
+		cycle, the cycle number is printed between the
+		function's name and the index number.
+
+
+ For the function's parents, the fields have the following meanings:
+
+     self	This is the amount of time that was propagated directly
+		from the function into this parent.
+
+     children	This is the amount of time that was propagated from
+		the function's children into this parent.
+
+     called	This is the number of times this parent called the
+		function `/' the total number of times the function
+		was called.  Recursive calls to the function are not
+		included in the number after the `/'.
+
+     name	This is the name of the parent.  The parent's index
+		number is printed after it.  If the parent is a
+		member of a cycle, the cycle number is printed between
+		the name and the index number.
+
+ If the parents of the function cannot be determined, the word
+ `<spontaneous>' is printed in the `name' field, and all the other
+ fields are blank.
+
+ For the function's children, the fields have the following meanings:
+
+     self	This is the amount of time that was propagated directly
+		from the child into the function.
+
+     children	This is the amount of time that was propagated from the
+		child's children to the function.
+
+     called	This is the number of times the function called
+		this child `/' the total number of times the child
+		was called.  Recursive calls by the child are not
+		listed in the number after the `/'.
+
+     name	This is the name of the child.  The child's index
+		number is printed after it.  If the child is a
+		member of a cycle, the cycle number is printed
+		between the name and the index number.
+
+ If there are any cycles (circles) in the call graph, there is an
+ entry for the cycle-as-a-whole.  This entry shows who called the
+ cycle (as parents) and the members of the cycle (as children.)
+ The `+' recursive calls entry shows the number of function calls that
+ were internal to the cycle, and the calls entry for each member shows,
+ for that member, how many times it was called from other members of
+ the cycle.
+
+Copyright (C) 2012-2020 Free Software Foundation, Inc.
+
+Copying and distribution of this file, with or without modification,
+are permitted in any medium without royalty provided the copyright
+notice and this notice are preserved.
+
+Index by function name
+
+  [35] _GLOBAL__sub_I__Z5usagev [3] GZipFileBlock::decode() [1] GZipFile::inflate()
+  [36] _GLOBAL__sub_I__ZN10LZ77Buffer3putERSt6vectorIhSaIhEE [31] GZipFileBlock::is_final() [4] GZipCRC32::update(std::vector<unsigned char, std::allocator<unsigned char> > const&)
+  [37] _GLOBAL__sub_I__ZN12HuffmanTableC2ERSt6vectorItSaItEES3_ [10] GZipFileBlock::GZipFileBlock(GZipFile&) [51] GZipCRC32::getValue()
+  [38] _GLOBAL__sub_I__ZN14BitInputStreamC2ERKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEE [9] BitInputStream::consumeNextBit() [27] HuffmanTable::getCodesLengths() const
+  [39] _GLOBAL__sub_I__ZN14GZipFileFooterC2Ev [20] BitInputStream::consumeNextByte() [28] HuffmanTable::getCodes() const
+  [40] _GLOBAL__sub_I__ZN14GZipFileHeaderC2Ev [19] BitInputStream::consumeNextNBits(unsigned short) [18] std::_Hashtable<unsigned short, std::pair<unsigned short const, std::vector<unsigned short, std::allocator<unsigned short> > >, std::allocator<std::pair<unsigned short const, std::vector<unsigned short, std::allocator<unsigned short> > > >, std::__detail::_Select1st, std::equal_to<unsigned short>, std::hash<unsigned short>, std::__detail::_Mod_range_hashing, std::__detail::_Default_ranged_hash, std::__detail::_Prime_rehash_policy, std::__detail::_Hashtable_traits<false, false, true> >::find(unsigned short const&)
+  [41] _GLOBAL__sub_I__ZN22LZ77LengthDistancePair6LENGTHE [43] BitInputStream::BitInputStream(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&) [24] std::_Hashtable<unsigned short, std::pair<unsigned short const, std::vector<unsigned short, std::allocator<unsigned short> > >, std::allocator<std::pair<unsigned short const, std::vector<unsigned short, std::allocator<unsigned short> > > >, std::__detail::_Select1st, std::equal_to<unsigned short>, std::hash<unsigned short>, std::__detail::_Mod_range_hashing, std::__detail::_Default_ranged_hash, std::__detail::_Prime_rehash_policy, std::__detail::_Hashtable_traits<false, false, true> >::clear()
+  [42] _GLOBAL__sub_I__ZN8GZipFileC2ERKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEES7_ [44] GZipFileFooter::validateFooter(unsigned int, unsigned int) [26] std::_Hashtable<unsigned short, std::pair<unsigned short const, std::vector<unsigned short, std::allocator<unsigned short> > >, std::allocator<std::pair<unsigned short const, std::vector<unsigned short, std::allocator<unsigned short> > > >, std::__detail::_Select1st, std::equal_to<unsigned short>, std::hash<unsigned short>, std::__detail::_Mod_range_hashing, std::__detail::_Default_ranged_hash, std::__detail::_Prime_rehash_policy, std::__detail::_Hashtable_traits<false, false, true> >::_M_rehash(unsigned long, unsigned long const&)
+   [7] LZ77Buffer::get(unsigned short, unsigned short) [45] GZipFileFooter::GZipFileFooter(BitInputStream&) [32] void std::vector<char, std::allocator<char> >::_M_realloc_insert<char const&>(__gnu_cxx::__normal_iterator<char*, std::vector<char, std::allocator<char> > >, char const&)
+   [6] LZ77Buffer::put(std::vector<unsigned char, std::allocator<unsigned char> >&) [46] GZipFileFooter::GZipFileFooter() [33] void std::vector<unsigned char, std::allocator<unsigned char> >::_M_realloc_insert<unsigned char>(__gnu_cxx::__normal_iterator<unsigned char*, std::vector<unsigned char, std::allocator<unsigned char> > >, unsigned char&&)
+  [29] HuffmanTable::HuffmanTable(std::vector<unsigned short, std::allocator<unsigned short> >&, std::vector<unsigned short, std::allocator<unsigned short> >&) [47] GZipFileHeader::GZipFileHeader(BitInputStream&) [22] void std::vector<unsigned short, std::allocator<unsigned short> >::_M_realloc_insert<unsigned short const&>(__gnu_cxx::__normal_iterator<unsigned short*, std::vector<unsigned short, std::allocator<unsigned short> > >, unsigned short const&)
+   [2] GZipFileBlock::get_output() [48] GZipFileHeader::GZipFileHeader() [25] std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >::basic_string<std::allocator<char> >(char const*, std::allocator<char> const&)
+   [8] GZipFileBlock::readSymbol(std::vector<unsigned short, std::allocator<unsigned short> >&, std::unordered_map<unsigned short, std::vector<unsigned short, std::allocator<unsigned short> >, std::hash<unsigned short>, std::equal_to<unsigned short>, std::allocator<std::pair<unsigned short const, std::vector<unsigned short, std::allocator<unsigned short> > > > >&) [49] GZipFileHeaderFlags::GZipFileHeaderFlags(unsigned char) [23] std::pair<std::_Rb_tree_iterator<unsigned short>, bool> std::_Rb_tree<unsigned short, unsigned short, std::_Identity<unsigned short>, std::less<unsigned short>, std::allocator<unsigned short> >::_M_insert_unique<unsigned short const&>(unsigned short const&)
+  [30] GZipFileBlock::constructCodes(std::vector<unsigned short, std::allocator<unsigned short> >&) [34] GZipFileHeaderFlags::GZipFileHeaderFlags() [21] std::__detail::_Map_base<unsigned short, std::pair<unsigned short const, std::vector<unsigned short, std::allocator<unsigned short> > >, std::allocator<std::pair<unsigned short const, std::vector<unsigned short, std::allocator<unsigned short> > > >, std::__detail::_Select1st, std::equal_to<unsigned short>, std::hash<unsigned short>, std::__detail::_Mod_range_hashing, std::__detail::_Default_ranged_hash, std::__detail::_Prime_rehash_policy, std::__detail::_Hashtable_traits<false, false, true>, true>::operator[](unsigned short const&)
+   [5] GZipFileBlock::decode_dynamic_codes() [50] GZipFile::extract_filename[abi:cxx11]()
